@@ -25,7 +25,9 @@ const prom = fetch(endpoint)
   .then(data => cities.push(...data))
 
 function findMatches(citiesToMatch, cities) {
-  return cities.filter()
+    return cities.filter(place => {
+    return place.city.match()
+  });
 }
 
 </script>
