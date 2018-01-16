@@ -20,16 +20,19 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 const cities = [];
 
 // will return a promise
-const prom = fetch(endpoint)
+fetch(endpoint)
   .then(blob => blob.json())
   .then(data => cities.push(...data))
 
 function findMatches(citiesToMatch, cities) {
     return cities.filter(place => {
-    return place.city.match()
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.city.match(regex) || place.city.match(regex)
   });
 }
 
+
+// variable into a regular expression
 </script>
   </body>
 </html>
