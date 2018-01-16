@@ -32,6 +32,14 @@ function findMatches(citiesToMatch, cities) {
 }
 function displayMatches() {
   const matchArray = findMatches(this.value, cities);
+  const html = matchArray.map(place => {
+    return `style.css
+      <li>
+        <span class='name'>${place.city}, ${place.state}</span>
+        
+      </li>
+    `;
+  })
 }
 
 const searchInput = document.querySelector('.search');
