@@ -31,13 +31,15 @@ function findMatches(citiesToMatch, cities) {
   });
 }
 function displayMatches() {
-  console.log(this.value);
+  const matchArray = findMatches(this.value, cities);
 }
 
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
-searchInput.addEventListener('change', findMatches);
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+// could also do this on keyup event
 
 // variable into a regular expression
 </script>
